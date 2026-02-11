@@ -1,0 +1,285 @@
+/* ============================================================
+   Design Tokens (from your source dump)
+   - Same values, cleaned variable names
+   - Invalid CSS var names were renamed with a mapping table
+   ============================================================ */
+
+:root {
+  /* -----------------------------
+     PRIMITIVES — NEUTRALS
+     ----------------------------- */
+  --_primitives---colors--neutral: #666;
+  --_primitives---colors--neutral-dark: #444;
+  --_primitives---colors--neutral-darker: #222;
+  --_primitives---colors--neutral-darkest: black;
+  --_primitives---colors--neutral-light: #aaa;
+  --_primitives---colors--neutral-lighter: #ccc;
+  --_primitives---colors--neutral-lightest: #eee;
+  --_primitives---colors--white: #fff;
+
+  /* -----------------------------
+     PRIMITIVES — OPACITY (DARK)
+     These are black with alpha.
+     ----------------------------- */
+  --_primitives---opacity--neutral-darkest-5:  #0000000d;
+  --_primitives---opacity--neutral-darkest-10: #0000001a;
+  --_primitives---opacity--neutral-darkest-15: #00000026;
+  --_primitives---opacity--neutral-darkest-20: #0003;
+  --_primitives---opacity--neutral-darkest-30: #0000004d;
+  --_primitives---opacity--neutral-darkest-40: #0006;
+  --_primitives---opacity--neutral-darkest-50: #00000080;
+  --_primitives---opacity--neutral-darkest-60: #0009;
+
+  /* Extra neutral opacity token present in dump (value ~60%) */
+  --neutral-darkest-80: #0009;
+
+  /* -----------------------------
+     PRIMITIVES — OPACITY (WHITE)
+     These are white with alpha.
+     ----------------------------- */
+  --_primitives---opacity--white-5:  #ffffff0d;
+  --_primitives---opacity--white-10: #ffffff1a;
+  --_primitives---opacity--white-15: #ffffff26;
+  --_primitives---opacity--white-20: #fff3;
+  --_primitives---opacity--white-30: #ffffff4d;
+  --_primitives---opacity--white-40: #fff6;
+  --_primitives---opacity--white-50: #ffffff80;
+  --_primitives---opacity--white-60: #fff9;
+
+  /* -----------------------------
+     PRIMITIVES — MISC
+     ----------------------------- */
+  --_primitives---opacity--transparent: transparent;
+
+  /* -----------------------------
+     TYPOGRAPHY TOKENS
+     ----------------------------- */
+  --_typography---font-styles--heading: Bison, Arial, sans-serif;
+  --_typography---font-styles--body: "Neue Haas Grotesk Display Pro", Arial, sans-serif;
+
+  /* -----------------------------
+     UI STYLES — RADIUS
+     ----------------------------- */
+  --_ui-styles---radius--small: 0px;
+  --_ui-styles---radius--medium: 0px;
+  --_ui-styles---radius--large: 0px;
+
+  /* -----------------------------
+     UI STYLES — STROKES
+     ----------------------------- */
+  --_ui-styles---stroke--border-width: 1px;
+  --_ui-styles---stroke--divider-width: 1px;
+
+  /* -----------------------------
+     COLOR SCHEME 1 — BRAND / UI
+     ----------------------------- */
+  --color-scheme-1--background: #fff;
+  --color-scheme-1--foreground: #eee;
+  --color-scheme-1--text: black;
+  --color-scheme-1--border: black;
+  --color-scheme-1--accent: black;
+  --color-scheme-1--blue: #1a94e6;
+  --color-scheme-1--yellow: #f8f252;
+  --color-scheme-1--purple: #c178fd;
+  --color-scheme-1--red: #fe4d01;
+  --color-scheme-1--peach: #fde4c9;
+  --color-scheme-1--light-blue: #cdd8e7;
+
+  /* -----------------------------
+     RENAMED “deleted relume” tokens
+     (original names were invalid CSS identifiers)
+     ----------------------------- */
+  --background-color--background-secondary__deleted_relume_variable_background_color_2: #eee;
+  --base-color-neutral--black__deleted_relume_variable_color_neutral_1: black;
+  --base-color-neutral--white__deleted_relume_variable_color_neutral_2: white;
+  --base-color-neutral--neutral-lightest__deleted_relume_variable_color_neutral_3: #eee;
+  --border-color--border-primary__deleted_relume_variable_border_color_1: black;
+  --text-color--text-alternate__deleted_relume_variable_text_color_3: white;
+}
+
+/* ============================================================
+   Base helpers (optional)
+   ============================================================ */
+
+.font-heading { font-family: var(--_typography---font-styles--heading); }
+.font-body    { font-family: var(--_typography---font-styles--body); }
+
+.radius-sm { border-radius: var(--_ui-styles---radius--small); }
+.radius-md { border-radius: var(--_ui-styles---radius--medium); }
+.radius-lg { border-radius: var(--_ui-styles---radius--large); }
+
+.border-width { border-width: var(--_ui-styles---stroke--border-width); }
+.divider      { height: var(--_ui-styles---stroke--divider-width); }
+
+/* ============================================================
+   Background utility classes
+   ============================================================ */
+
+.bg-page        { background: var(--color-scheme-1--background); }
+.bg-surface     { background: var(--color-scheme-1--foreground); }
+.bg-surface-2   { background: var(--_primitives---colors--neutral-lightest); }
+.bg-white       { background: var(--_primitives---colors--white); }
+.bg-transparent { background: var(--_primitives---opacity--transparent); }
+
+.bg-blue   { background: var(--color-scheme-1--blue); }
+.bg-yellow { background: var(--color-scheme-1--yellow); }
+.bg-purple { background: var(--color-scheme-1--purple); }
+.bg-red    { background: var(--color-scheme-1--red); }
+.bg-peach  { background: var(--color-scheme-1--peach); }
+.bg-light-blue { background: var(--color-scheme-1--light-blue); }
+
+.bg-neutral        { background: var(--_primitives---colors--neutral); }
+.bg-neutral-dark   { background: var(--_primitives---colors--neutral-dark); }
+.bg-neutral-darker { background: var(--_primitives---colors--neutral-darker); }
+.bg-black          { background: var(--_primitives---colors--neutral-darkest); }
+
+.bg-overlay-dark-10 { background: var(--_primitives---opacity--neutral-darkest-10); }
+.bg-overlay-dark-20 { background: var(--_primitives---opacity--neutral-darkest-20); }
+.bg-overlay-dark-30 { background: var(--_primitives---opacity--neutral-darkest-30); }
+
+.bg-overlay-white-10 { background: var(--_primitives---opacity--white-10); }
+.bg-overlay-white-20 { background: var(--_primitives---opacity--white-20); }
+.bg-overlay-white-30 { background: var(--_primitives---opacity--white-30); }
+
+/* ============================================================
+   Text utility classes
+   ============================================================ */
+
+.text-primary { color: var(--color-scheme-1--text); }
+.text-white   { color: var(--_primitives---colors--white); }
+.text-black   { color: var(--_primitives---colors--neutral-darkest); }
+
+.text-neutral       { color: var(--_primitives---colors--neutral); }
+.text-neutral-dark  { color: var(--_primitives---colors--neutral-dark); }
+.text-neutral-light { color: var(--_primitives---colors--neutral-light); }
+
+.text-blue   { color: var(--color-scheme-1--blue); }
+.text-yellow { color: var(--color-scheme-1--yellow); }
+.text-purple { color: var(--color-scheme-1--purple); }
+.text-red    { color: var(--color-scheme-1--red); }
+.text-peach  { color: var(--color-scheme-1--peach); }
+.text-light-blue { color: var(--color-scheme-1--light-blue); }
+
+/* ============================================================
+   Border utility classes
+   ============================================================ */
+
+.border-primary { border: var(--_ui-styles---stroke--border-width) solid var(--color-scheme-1--border); }
+.border-black   { border: var(--_ui-styles---stroke--border-width) solid var(--_primitives---colors--neutral-darkest); }
+
+.border-neutral-light  { border: var(--_ui-styles---stroke--border-width) solid var(--_primitives---colors--neutral-light); }
+.border-neutral-lighter{ border: var(--_ui-styles---stroke--border-width) solid var(--_primitives---colors--neutral-lighter); }
+.border-neutral-lightest{ border: var(--_ui-styles---stroke--border-width) solid var(--_primitives---colors--neutral-lightest); }
+
+.border-subtle-dark-10 { border: var(--_ui-styles---stroke--border-width) solid var(--_primitives---opacity--neutral-darkest-10); }
+.border-subtle-dark-20 { border: var(--_ui-styles---stroke--border-width) solid var(--_primitives---opacity--neutral-darkest-20); }
+.border-subtle-white-20{ border: var(--_ui-styles---stroke--border-width) solid var(--_primitives---opacity--white-20); }
+
+/* ============================================================
+   Button classes (simple defaults)
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--_ui-styles---radius--medium);
+
+  font-family: var(--_typography---font-styles--body);
+  font-size: 0.95rem;
+  line-height: 1;
+
+  border: var(--_ui-styles---stroke--border-width) solid var(--color-scheme-1--border);
+  background: var(--color-scheme-1--accent);
+  color: var(--_primitives---colors--white);
+
+  cursor: pointer;
+  transition: transform 120ms ease, opacity 120ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-blue {
+  background: var(--color-scheme-1--blue);
+  border-color: var(--color-scheme-1--blue);
+  color: var(--_primitives---colors--white);
+}
+
+.btn-yellow {
+  background: var(--color-scheme-1--yellow);
+  border-color: var(--color-scheme-1--yellow);
+  color: var(--_primitives---colors--neutral-darkest);
+}
+
+.btn-purple {
+  background: var(--color-scheme-1--purple);
+  border-color: var(--color-scheme-1--purple);
+  color: var(--_primitives---colors--white);
+}
+
+.btn-red {
+  background: var(--color-scheme-1--red);
+  border-color: var(--color-scheme-1--red);
+  color: var(--_primitives---colors--white);
+}
+
+.btn-peach {
+  background: var(--color-scheme-1--peach);
+  border-color: var(--color-scheme-1--peach);
+  color: var(--_primitives---colors--neutral-darkest);
+}
+
+.btn-light-blue {
+  background: var(--color-scheme-1--light-blue);
+  border-color: var(--color-scheme-1--light-blue);
+  color: var(--_primitives---colors--neutral-darker);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-scheme-1--text);
+  border-color: var(--color-scheme-1--border);
+}
+
+.btn-subtle {
+  background: var(--_primitives---opacity--neutral-darkest-5);
+  color: var(--color-scheme-1--text);
+  border-color: var(--_primitives---opacity--neutral-darkest-10);
+}
+
+/* ============================================================
+   Card / Panel helpers
+   ============================================================ */
+
+.card {
+  background: var(--color-scheme-1--foreground);
+  border: var(--_ui-styles---stroke--border-width) solid var(--color-scheme-1--border);
+  border-radius: var(--_ui-styles---radius--large);
+  padding: 1rem;
+  color: var(--color-scheme-1--text);
+}
+
+.card-muted {
+  background: var(--_primitives---colors--neutral-lightest);
+  border: var(--_ui-styles---stroke--border-width) solid var(--_primitives---opacity--neutral-darkest-10);
+}
+
+/* ============================================================
+   Optional: relume token wrappers (renamed)
+   ============================================================ */
+
+.bg-secondary-relume {
+  background: var(--background-color--background-secondary__deleted_relume_variable_background_color_2);
+}
+
+.border-primary-relume {
+  border: var(--_ui-styles---stroke--border-width) solid var(--border-color--border-primary__deleted_relume_variable_border_color_1);
+}
+
+.text-alternate-relume {
+  color: var(--text-color--text-alternate__deleted_relume_variable_text_color_3);
+}
