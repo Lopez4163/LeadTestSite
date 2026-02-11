@@ -26,7 +26,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="fNSoodsh5UqSsFOY" data-version="062024"></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `!function(key) {
+            if (window.reb2b) return;
+            window.reb2b = { loaded: true };
+            var s = document.createElement("script");
+            s.async = true;
+            s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";
+            document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);
+          }("46DJ4HGZW761");`,
+        }}
+      ></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
