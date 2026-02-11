@@ -43,7 +43,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <CookieConsent/>
+        <CookieConsent rb2bKey="46DJ4HGZW761" />
       </body>
     </html>
   );
