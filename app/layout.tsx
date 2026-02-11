@@ -24,6 +24,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+      <script 
+        id="vtag-ai-js" 
+        async src="https://r2.leadsy.ai/tag.js" 
+        data-pid="fNSoodsh5UqSsFOY" 
+        data-version="062024">
+      </script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
